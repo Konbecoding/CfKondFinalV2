@@ -2,7 +2,9 @@
     <meta charset="UTF-8">
     <title>Register</title>
     <link rel="stylesheet" th:href="@{/css/regstyle.css}">
+</head>
 <body>
+<div class="register-container">
 <h1>Register</h1>
 <form action="/api/users/register" method="post">
     <input type="text" name="username" placeholder="Username" required>
@@ -10,4 +12,5 @@
     <button type="submit">Register</button>
 </form>
 <p>Already have an account? <a href="/home/login.html">Login here</a></p>
+</div>
 </body>
