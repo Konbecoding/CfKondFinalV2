@@ -1,0 +1,53 @@
+.container {
+    text-align: center;
+    color: white;
+    background: url('/images/hpbackround.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.main-buttons button {
+    margin: 10px;
+    padding: 15px 30px;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.main-buttons button:hover {
+    background: white;
+    color: black;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+    padding: 10px 0;
+    font-size: 12px
+}
+
+
+

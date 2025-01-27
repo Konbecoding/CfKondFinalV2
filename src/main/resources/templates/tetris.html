@@ -1,0 +1,16 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>JavaScript Tetris</title>
+    <link rel="stylesheet" th:href="@{/css/tetristyle.css}">
+    <script th:src="@{/js/tetrisbasic.js}"></script>
+</head>
+<div class="top-buttons">
+    <button type="button" class="btn" onclick="window.location.href='/'">Home</button>
+    <form action="/logout" method="POST" class="logout-form">
+        <button type="submit" class="btn">Logout</button>
+    </form>
+</div>
+<body>
+<canvas id='my-canvas'></canvas>
+</body>
