@@ -1,7 +1,6 @@
 package gr.aueb.cf.CfKondFinalV2;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
@@ -18,8 +17,7 @@ public class User {
     @NotBlank(message = "Password is required")
     private String password;
 
-    // Getters and Setters
-
+    // getters and setters
     public String getUsername() { return username; }
     public void setUsername(String username) { this.username = username; }
 

@@ -8,12 +8,12 @@ public class PageController {
 
     @GetMapping("/")
     public String home() {
-        return "index";  // Loads index.html from templates
+        return "index";
     }
 
     @GetMapping("/about")
     public String aboutPage() {
-        return "about";  // Loads about.html from templates
+        return "about";
     }
 
     @GetMapping("/user/register")
@@ -28,7 +28,7 @@ public class PageController {
 
     @GetMapping("/tetris")
     public String tetrisPage() {
-        return "tetris";  // Requires authentication, loads tetris.html
+        return "tetris";
     }
 
 }
