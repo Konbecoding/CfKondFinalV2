@@ -41,10 +41,6 @@ input {
     font-size: 1em;
 }
 
-input::placeholder {
-    color: #888;
-}
-
 button {
     padding: 10px;
     background: none;
@@ -70,5 +66,4 @@ footer {
     color: black;
     padding: 10px 0;
     font-size: 12px;
-    background: rgba(255, 255, 255, 0.8);
 }
