@@ -60,5 +60,17 @@ button:hover {
     color: black;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+    padding: 10px 0;
+    font-size: 12px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
 
 
