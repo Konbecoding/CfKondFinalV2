@@ -15,7 +15,10 @@ public class AuthController {
     }
 
     @GetMapping("/login")
-    public String loginPage() {
+    public String loginPage(@RequestParam(value = "error", required = false) String error, Model model) {
+        if (error != null) {
+            model.addAttribute("errorMessage", "Invalid username or password.");
+        }
         return "login";
     }
 
@@ -26,8 +29,20 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public String registerUser(@ModelAttribute("user") @Valid User user) {
-        userService.registerUser(user);
-        return "redirect:/login?success";
+    public String registerUser(@ModelAttribute("user") @Valid User user, Model model) {
+        try {
+            if (userService.userExists(user.getUsername())) {
+                model.addAttribute("errorMessage", "Username already taken.");
+                return "register";
+            }
+            userService.registerUser(user);
+            model.addAttribute("successMessage", "Registration successful! You can now log in.");
+            return "login";
+        } catch (Exception e) {
+            model.addAttribute("errorMessage", "An error occurred during registration. Please try again.");
+            return "register";
+        }
     }
+
 }
+

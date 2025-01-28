@@ -14,11 +14,16 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
+    public boolean userExists(String username) {
+        return userRepository.findByUsername(username).isPresent();
+    }
+
     public void registerUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
     }
 }
+
 
 
 

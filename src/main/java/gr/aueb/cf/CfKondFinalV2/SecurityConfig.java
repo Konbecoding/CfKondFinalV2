@@ -21,7 +21,9 @@ public class SecurityConfig {
                 )
                 .formLogin(login -> login
                         .loginPage("/login")
+                        .loginProcessingUrl("/login")
                         .defaultSuccessUrl("/tetris", true)
+                        .failureUrl("/login?error=true")
                         .permitAll()
                 )
                 .logout(logout -> logout

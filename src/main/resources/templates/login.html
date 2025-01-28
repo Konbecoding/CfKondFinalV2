@@ -7,6 +7,7 @@
 <div class="login-container">
     <div class="login-box">
         <h2>Login</h2>
+        <p th:if="${errorMessage}" class="error-message" th:text="${errorMessage}"></p>
         <form action="/login" method="post">
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
