@@ -36,8 +36,8 @@ public class AuthController {
                 return "register";
             }
             userService.registerUser(user);
-            model.addAttribute("successMessage", "Registration successful! You can now log in.");
             return "login";
+
         } catch (Exception e) {
             model.addAttribute("errorMessage", "An error occurred during registration. Please try again.");
             return "register";
