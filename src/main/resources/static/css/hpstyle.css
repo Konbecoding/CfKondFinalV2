@@ -1,4 +1,4 @@
-.container {
+.welcome-container {
     text-align: center;
     color: white;
     background: url('/images/hpbackround.jpg') no-repeat center center fixed;
@@ -12,12 +12,12 @@
     border-radius: 10px;
 }
 
-.container h1 {
+.welcome-container h1 {
     font-size: 3em;
     margin-bottom: 10px;
 }
 
-.container p {
+.welcome-container p {
     font-size: 1.2em;
     margin-bottom: 20px;
 }
