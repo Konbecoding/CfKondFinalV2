@@ -1,0 +1,31 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: tetris_db
+      MYSQL_USER: tetris_user
+      MYSQL_PASSWORD: tetris_password
+    ports:
+      - "3306:3306"
+    networks:
+      - mynetwork
+
+  app:
+    build: .
+    container_name: spring_app
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/tetris_db
+      SPRING_DATASOURCE_USERNAME: tetris_user
+      SPRING_DATASOURCE_PASSWORD: tetris_password
+    ports:
+      - "8080:8080"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
