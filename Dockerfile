@@ -1,14 +1,11 @@
-# Use a lightweight OpenJDK image
+# Use an official OpenJDK runtime as a parent image
 FROM openjdk:17-jdk-slim
 
-# Set the working directory
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy the built JAR file into the container
-COPY build/libs/*.jar app.jar
+# Copy the built application JAR into the container
+COPY ./build/libs/*.jar app.jar
 
-# Expose the application port
-EXPOSE 8080
-
-# Run the JAR file
+# Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
