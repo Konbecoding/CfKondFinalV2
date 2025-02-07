@@ -1,27 +1,33 @@
 services:
-  db:
+  mysql_db:
     image: mysql:8.0
-    container_name: mysql_db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: tetris_db
       MYSQL_USER: tetris_user
-      MYSQL_PASSWORD: tetris_password
+      MYSQL_PASSWORD: tetris_pass
     ports:
       - "3306:3306"
     networks:
       - mynetwork
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -proot"]
+      interval: 10s
+      retries: 5
+      timeout: 5s
 
-  app:
+  spring_app:
     build: .
-    container_name: spring_app
+    restart: always
     depends_on:
-      - db
+      mysql_db:
+        condition: service_healthy
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/tetris_db
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_db:3306/tetris_db?serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: tetris_user
-      SPRING_DATASOURCE_PASSWORD: tetris_password
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_JPA_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
     ports:
       - "8080:8080"
     networks:
