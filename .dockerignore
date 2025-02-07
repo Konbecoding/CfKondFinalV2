@@ -4,3 +4,6 @@ target
 build
 Dockerfile
 docker-compose.yml
+*.log
+node_modules
+.env
