@@ -16,8 +16,8 @@ This my final CF project its a Spring Boot application that includes a custom au
 
 Before running the application, make sure that you have the following installed:
 
-1. **Java 17++** : [Download Here](https://adoptium.net/)  
-2. **Gradle** : [Download Here](https://gradle.org/install/)  
+1. **Java 17++** : [Download Here](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html)  
+2. **Gradle** : [Download Here](https://gradle.org/releases/)  
 3. **IDE** : Use IntelliJ IDEA, Eclipse, or any preferred IDE that supports Spring Boot.  
 4. **Docker** : [Download Here](https://www.docker.com/get-started)  
 
