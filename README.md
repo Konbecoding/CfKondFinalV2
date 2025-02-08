@@ -8,7 +8,7 @@ This my final CF project its a Spring Boot application that includes a custom au
 
 - **Back-End:** Spring Boot, Spring Security, Spring Data JPA  
 - **Database:** MySQL  
-- **Front-End:** HTML, CSS w/ Thymeleaf  
+- **Front-End:** HTML, CSS w/ Thymeleaf   
 - **Build Tool:** Gradle  
 - **Containerization:** Docker (Docker Compose)
 
