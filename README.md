@@ -24,4 +24,4 @@ Before running the application, make sure that you have the following installed:
 ## Build & Deployment
 
 Make sure that you have installed all the prerequisites listed above and download or clone the repository.
-After that open your IDE and type “./gradlew build” in the terminal in order to build a launchable .JAR file, after making sure that it has been created in the “build/libs” directory type “docker-compose up” in the terminal, open any preferred browser and navigate to http://localhost:8080 in order to access the application. 
+After that open the project in your IDE and type “./gradlew build” in the terminal in order to build a launchable .JAR file, after making sure that it has been created in the “build/libs” directory type “docker-compose up” in the terminal, open any preferred browser and navigate to http://localhost:8080 in order to access the application. 
